@@ -1,0 +1,1 @@
+./emulator-rocketchip-DefaultConfig  +verbose test 3>&1 1>&2 2>&3 | /home/baochuquan/Desktop/MPRC-RISCV/riscv/bin/spike-dasm > record.out

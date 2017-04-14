@@ -1,0 +1,5 @@
+riscv64-unknown-elf-gcc  -O2  -std=gnu99  -mcmodel=medany -static  -ffast-math -fno-common -fno-builtin-printf -D__ASSEMBLY__=1 -c  crt.S -o crt.o
+riscv64-unknown-elf-gcc  -O2  -std=gnu99  -mcmodel=medany -static  -ffast-math -fno-common -fno-builtin-printf   -c -o test.o test.c
+riscv64-unknown-elf-gcc  -O2  -std=gnu99  -mcmodel=medany -static  -ffast-math -fno-common -fno-builtin-printf   -c -o syscalls.o syscalls.c
+riscv64-unknown-elf-gcc      -mcmodel=medany -T ls.ld  -nostdlib -nostartfiles -ffast-math  crt.o  test.o  syscalls.o  -o test
+riscv64-unknown-elf-objdump -d test > test.txt
