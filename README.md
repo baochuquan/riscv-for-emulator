@@ -1,12 +1,12 @@
-### What's the role of this repo?
-To help you compile your own test program into binary. And you can run this binary on top of ```emulator```. Also, you can printf the CPU pipeline information into an output file. 
+# 说明
+这个仓库可以帮助你将测试程序编译成二进制文件，以便运行在RISC-V Rocket
+Chip模拟器上。此外，你还可以将程序运行时的CPU信息打印到一个指定的output文件中。
 
-### How to use?
-You may have ```git clone``` the [RISC-V RocketChip Generator](https://github.com/ucb-bar/rocket-chip).  
+# 使用方法
+前提是你已经``git clone``了[RISC-V RocketChip
+Generator](https://github.com/ucb-bar/rocket-chip)项目仓库。  
 
-Enter ```rocket-chip/emulator```, then ```git clone``` this repo.
+进入到``rocket-chip/emulator``目录，然后将本仓库``git clone``下来。
 
-Then enter ```riscv-for-emulator``` directory. You can see some folders with a numeric prefix, which are the user test programs, and an ```common``` folder which has some common files for these test programs.
-You can creat a your own folder, better with a numeric prefix. And Copy a makefile from any other test programs' folder. Before you type ```make```, you need to see what's in the makefile, the most important is that you need to modify some places to make it fit your own environment.
-
-There are three places you need to modify: ```line2```, ```line19```, ```line33```
+完成之后，进入到``riscv-for-emulator``目录中。你可以看到一些带有数字前缀的目录，这些目录都对应这一个测试程序。其中有一个``common``目录，内部包含对于这些测试程序通用的编译文件。你也可以自己创建一个目录，最好带有前缀（以便区分测试程序）。从其他测试程序目录下拷贝一个``makefile``文件。然后针对你的测试程序修改一下``makefile``后，执行``make``命令，就能生成可以运行在Rocket
+Chip模拟器上的基于RISC-V的二进制程序啦。
